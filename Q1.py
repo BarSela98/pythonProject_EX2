@@ -70,20 +70,6 @@ def segment(im, thresh=128):
 
 
 # --------------- Question 1.8 ---------------
-def linearville2(robber, policeman):
-    x = robber.sum(axis=2)
-    result = np.all(x == 1)
-    if result == False:
-        print("invalid input")
-        return False
-    x, y, z = robber.shape
-    list = np.array(robber.reshape(x * y, z))
-    mask = np.isin(list, policeman)
-    print(mask)
-    robber.sum()
-
-    # return np.where(list == policeman)
-
 
 def linearville(robber, policeman):
     hours, stores, days = robber.shape
